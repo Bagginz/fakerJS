@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <div id="randomname"></div>
+        <div id="randomEmail"></div>
+        <div id="randomCard"></div>
+        <script
+        src="https://code.jquery.com/jquery-3.4.1.slim.js"
+        integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI="
+        crossorigin="anonymous"></script>
+        <script src ="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.js" type = "text/javascript"></script>
+        <script>
+           var randomName = faker.name.findName(); // Caitlyn Kerluke
+           var randomEmail = faker.internet.email(); // Rusty@arne.info
+           var randomCard = faker.helpers.createCard(); // random contact card containing many properties
+           console.log('randomCard ::', randomCard);
+           $("#randomname").append(randomName);
+           $("#randomEmail").append(randomEmail);
+           $("#randomCard").append(JSON.stringify(randomCard));
+        </script>
+    </body>
+</html>
